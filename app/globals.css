@@ -3,31 +3,62 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+.gradient {
+	z-index: -4;
+	max-width: 640px;
+	background-image: radial-gradient(
+			at 27% 37%,
+			hsla(215, 98%, 61%, 1) 0px,
+			transparent 0%
+		),
+		radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+		radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%);
+	position: absolute;
+	content: "";
+	width: 100dvw;
+	height: 50dvh;
+	filter: blur(100px) saturate(150%);
+	top: 33.3%;
+	opacity: 0.15;
+}
+
+.gradient-2 {
+	content: "";
+	background-image: url("/grid.svg");
+	z-index: -5;
+	position: absolute;
+	width: 100dvw;
+	height: 100dvh;
+	top: 0;
+	opacity: 0.4;
+	filter: invert(1);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 }
