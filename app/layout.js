@@ -12,8 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} overflow-x-hidden`}>
-				<main className="min-h-dvh p-4 relative">
+			<body className={`${inter.className} lg:!overflow-y-scroll`}>
+				<main className="min-h-dvh p-4">
 					<div className="gradient" />
 					<div className="gradient-2" />
 					<div className="gradient-3" />

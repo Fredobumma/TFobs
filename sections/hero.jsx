@@ -10,7 +10,7 @@ const Hero = () => {
 			</h1>
 			<p className="mt-5 text-lg text-gray-300 opacity-80 sm:text-xl max-w-3xl lg:mt-[30px] mx-auto text-center">
 				Access to generate your unique content data from AI or in-depth general
-				resources. Scale Up and boost your productivity with good data!
+				resources. Scale up and boost your productivity with good data!
 			</p>
 		</section>
 	);
