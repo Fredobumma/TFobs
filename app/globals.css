@@ -26,7 +26,8 @@ body {
 		rgb(var(--background-start-rgb));
 }
 
-.gradient {
+.gradient,
+.gradient-3 {
 	z-index: -4;
 	max-width: 640px;
 	background-image: radial-gradient(
@@ -34,22 +35,30 @@ body {
 			hsla(215, 98%, 61%, 1) 0px,
 			transparent 0%
 		),
-		radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-		radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%);
-	position: absolute;
+		radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.6) 0px, transparent 50%),
+		radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.6) 0px, transparent 50%);
+	position: fixed;
 	content: "";
 	width: 100dvw;
 	height: 50dvh;
 	filter: blur(100px) saturate(150%);
-	top: 33.3%;
 	opacity: 0.15;
+}
+
+.gradient {
+	top: 20%;
+}
+
+.gradient-3 {
+	bottom: 0;
+	right: -20%;
 }
 
 .gradient-2 {
 	content: "";
 	background-image: url("/grid.svg");
 	z-index: -5;
-	position: absolute;
+	position: fixed;
 	width: 100dvw;
 	height: 100dvh;
 	top: 0;
