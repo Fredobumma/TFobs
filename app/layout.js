@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body className={`${inter.className} lg:!overflow-y-scroll`}>
+		<html lang="en" className="lg:overflow-y-scroll">
+			<body className={`${inter.className} max-w-[1440px] mx-auto`}>
 				<main className="min-h-dvh p-4">
 					<div className="gradient" />
 					<div className="gradient-2" />
