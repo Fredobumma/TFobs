@@ -1,4 +1,4 @@
-import { Faq, Hero, NavBar } from "@/sections";
+import { Faq, Footer, Hero, NavBar } from "@/sections";
 import Pricing from "./../sections/pricing";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
 			<Hero />
 			<Pricing />
 			<Faq />
+			<Footer />
 		</>
 	);
 }

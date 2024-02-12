@@ -31,15 +31,15 @@ const Faq = () => {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus.",
 		},
 		{
-			question: "What's the best way to contact Tfobs if I have challenges",
+			question: "What's the best way to contact TFobs if I have challenges",
 			answer:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus.",
 		},
 	];
 
 	return (
-		<section>
-			<h2 className="text-4xl font-extrabold max-w-[400px] mx-auto leading-tight mt-20 mb-[30px] sm:mb-10 sm:leading-snug text-white sm:max-w-[700px] text-center">
+		<section id="faq" className="mt-20 pt-10">
+			<h2 className="text-4xl font-extrabold max-w-[400px] mx-auto leading-tight mb-[30px] sm:mb-10 sm:leading-snug text-white sm:max-w-[700px] text-center">
 				Frequently Asked{" "}
 				<span className="bg-clip-text bg-gradient-to-tr from-[#815316] from-25% via-[#b69e57] to-60% to-[#815316] text-transparent">
 					Questions
@@ -59,7 +59,7 @@ const Faq = () => {
 									viewBox="0 0 16 16"
 								>
 									<path
-										fill-rule="evenodd"
+										fillRule="evenodd"
 										d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
 									></path>
 								</svg>
