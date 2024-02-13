@@ -1,11 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 
 export default function affiliateLayout({ children }) {
 	return (
 		<>
-			<div className="space-y-6 p-10 pb-16">
-				<div className="text-center space-y-0.5">
+			<Link href="/" className="m-5">
+				<Image
+					alt="Logo"
+					className="w-auto"
+					src="/tobs-logo.png"
+					width={120}
+					height={54}
+				/>
+			</Link>
+			<div className="space-y-6 p-10 pt-20 pb-16">
+				<div className="text-center -mb-5 space-y-0.5 md:mb-0">
 					<h2 className="text-2xl font-bold tracking-tight">
 						Send us a message
 					</h2>
