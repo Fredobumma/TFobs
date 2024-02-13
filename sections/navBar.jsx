@@ -32,9 +32,12 @@ const NavBar = () => {
 					</li>
 				))}
 			</ul>
-			<button className="hidden lg:block bg-gradient-to-tr from-[#815316] from-20% via-[#b69e57] to-95% to-[#815316] font-bold rounded-lg m-5 py-4 px-[30px] text-black hover:scale-95 focus:scale-95 transition ease-in-out duration-300">
+			<Link
+				href="/get-started"
+				className="hidden lg:block bg-gradient-to-tr from-[#815316] from-20% via-[#b69e57] to-95% to-[#815316] font-bold rounded-lg m-5 py-4 px-[30px] text-black hover:scale-95 focus:scale-95 transition ease-in-out duration-300"
+			>
 				Get Started
-			</button>
+			</Link>
 			<MobileMenu links={links} />
 		</nav>
 	);
