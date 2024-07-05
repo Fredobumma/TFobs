@@ -35,7 +35,7 @@ const Pricing = () => {
 						<Link
 							href=""
 							aria-describedby="tier-standard"
-							className="ring-1 ring-inset ring-white hover:ring-white mt-6 block rounded-md py-2 px-3 text-center text-base font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b69e57] hover:outline-[#b69e57] hover:outline-offset-2 hover:outline-2 hover:outline"
+							className="ring-1 ring-inset ring-white hover:ring-white mt-6 block rounded-md py-2 px-3 text-center text-base font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b69e57] hover:outline-[#b69e57] hover:outline-offset-2 hover:outline-2 hover:outline transition ease-in-out duration-300"
 							target="_blank"
 						>
 							Subscribe Now
@@ -122,7 +122,7 @@ const Pricing = () => {
 						<Link
 							href=""
 							aria-describedby="tier-standard"
-							className="bg-white text-[#815316] mt-6 block rounded-md py-2 px-3 text-center text-base font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b69e57] hover:outline-[#b69e57] hover:outline-offset-2 hover:outline-2 hover:outline"
+							className="bg-white text-[#815316] mt-6 block rounded-md py-2 px-3 text-center text-base font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b69e57] hover:outline-[#b69e57] hover:outline-offset-2 hover:outline-2 hover:outline transition ease-in-out duration-300"
 							target="_blank"
 						>
 							Subscribe Now

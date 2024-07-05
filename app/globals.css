@@ -3,17 +3,11 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
-}
+	--foreground-rgb: 255, 255, 255;
+	--background-start-rgb: 0, 0, 0;
+	--background-end-rgb: 0, 0, 0;
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
+	--trans-dur: 0.3s;
 }
 
 body {
@@ -70,5 +64,62 @@ body {
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
+	}
+}
+
+.loader {
+	position: fixed;
+	width: 100vw;
+	display: grid;
+	place-items: center;
+	inset: 0;
+	min-height: 100dvh;
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background-color var(--trans-dur);
+	z-index: 200;
+}
+.ip {
+	width: 5em;
+	height: 2.5em;
+}
+.ip__track {
+	stroke: #fff;
+
+	transition: stroke var(--trans-dur);
+}
+.ip__worm1,
+.ip__worm2 {
+	animation: worm1 2s linear infinite;
+}
+.ip__worm2 {
+	animation-name: worm2;
+}
+
+/* Animation */
+@keyframes worm1 {
+	from {
+		stroke-dashoffset: 0;
+	}
+	50% {
+		animation-timing-function: steps(1);
+		stroke-dashoffset: -358;
+	}
+	50.01% {
+		animation-timing-function: linear;
+		stroke-dashoffset: 358;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes worm2 {
+	from {
+		stroke-dashoffset: 358;
+	}
+	50% {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: -358;
 	}
 }
