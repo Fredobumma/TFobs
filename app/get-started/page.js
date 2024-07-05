@@ -21,7 +21,7 @@ export default function GetStarted() {
 	const { toast } = useToast();
 
 	function handleClick() {
-		toast({ title: "Currently unavailable or suspended at this time." });
+		toast({ title: "Currently unavailable at this time." });
 	}
 
 	return (

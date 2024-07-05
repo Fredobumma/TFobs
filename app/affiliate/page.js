@@ -65,7 +65,7 @@ export default function Affiliate() {
 
 	function onSubmit(_data) {
 		toast({
-			title: "Currently unavailable or suspended at this time."
+			title: "Currently unavailable at this time."
 			// title: "You submitted the following values:",
 			// description: (
 			// 	<pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
