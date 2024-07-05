@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -12,10 +14,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function GetStarted() {
 	const [value, setValue] = useState("login");
+	const { toast } = useToast();
+
+	function handleClick() {
+		toast({ title: "Currently unavailable or suspended at this time." });
+	}
 
 	return (
 		<Tabs
@@ -67,12 +74,13 @@ export default function GetStarted() {
 						</div>
 					</CardContent>
 					<CardFooter>
-						<Button
+						<button
 							type="submit"
-							className="bg-gradient-to-tr from-[#815316] from-20% via-[#b69e57] to-95% to-[#815316] font-bold rounded-lg py-4 px-[30px] text-black hover:scale-95 focus:scale-95 transition ease-in-out duration-300"
-						>
+							onClick={handleClick}
+							className="bg-gradient-to-tr from-[#815316] from-20% via-[#b69e57] to-95% to-[#815316] font-bold rounded-lg py-3 px-[30px] text-black hover:scale-95 focus:scale-95 transition ease-in-out duration-300"
+							>
 							Login
-						</Button>
+						</button>
 					</CardFooter>
 				</Card>
 			</TabsContent>
@@ -95,12 +103,13 @@ export default function GetStarted() {
 						</div>
 					</CardContent>
 					<CardFooter>
-						<Button
+						<button
 							type="submit"
-							className="bg-gradient-to-tr from-[#815316] from-20% via-[#b69e57] to-95% to-[#815316] font-bold rounded-lg py-4 px-[30px] text-black hover:scale-95 focus:scale-95 transition ease-in-out duration-300"
+							onClick={handleClick}
+							className="bg-gradient-to-tr from-[#815316] from-20% via-[#b69e57] to-95% to-[#815316] font-bold rounded-lg py-3 px-[30px] text-black hover:scale-95 focus:scale-95 transition ease-in-out duration-300"
 						>
 							Register
-						</Button>
+						</button>
 					</CardFooter>
 				</Card>
 			</TabsContent>

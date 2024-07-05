@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { useToast } from "@/components/ui/use-toast";
-import { Toaster } from "@/components/ui/toaster";
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -50,6 +49,9 @@ const profileFormSchema = z.object({
 
 // This can come from your database or API.
 const defaultValues = {
+	name: "",
+	userEmail: "",
+	email: "",
 	bio: "Hello, my name is John",
 };
 
@@ -61,20 +63,20 @@ export default function Affiliate() {
 	});
 	const { toast } = useToast();
 
-	function onSubmit(data) {
+	function onSubmit(_data) {
 		toast({
-			title: "You submitted the following values:",
-			description: (
-				<pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-					<code className="text-white">{JSON.stringify(data, null, 2)}</code>
-				</pre>
-			),
+			title: "Currently unavailable or suspended at this time."
+			// title: "You submitted the following values:",
+			// description: (
+			// 	<pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+			// 		<code className="text-white">{JSON.stringify(data, null, 2)}</code>
+			// 	</pre>
+			// ),
 		});
 	}
 
 	return (
 		<Form {...form}>
-			<Toaster />
 			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
 				<FormField
 					control={form.control}

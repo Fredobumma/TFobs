@@ -4,7 +4,7 @@ import Link from "next/link";
 const layout = ({ children }) => {
 	return (
 		<>
-			<Link href="/" className="m-5">
+			<Link href="/" className="inline-block m-5 lg:ml-10">
 				<Image
 					alt="Logo"
 					className="w-auto"

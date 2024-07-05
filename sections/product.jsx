@@ -8,7 +8,6 @@ import Link from "next/link";
 const Product = () => {
 	const [videos, setVideos] = useState([]);
 
-	console.log(videos);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
